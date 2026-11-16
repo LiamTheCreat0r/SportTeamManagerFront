@@ -9,6 +9,7 @@ import Joueurs from './pages/Joueurs.jsx'
 import Login from './pages/Login.jsx'
 import RencontreForm from './pages/RencontreForm.jsx'
 import Rencontres from './pages/Rencontres.jsx'
+import TableauDeBord from './pages/TableauDeBord.jsx'
 
 function RequireAuth({ children }) {
   const { user } = useAuth()
@@ -30,7 +31,7 @@ export default function App() {
               </RequireAuth>
             }
           >
-            <Route index element={<p>Tableau de bord</p>} />
+            <Route index element={<TableauDeBord />} />
             <Route path="joueurs" element={<Joueurs />} />
             <Route path="joueurs/nouveau" element={<JoueurForm />} />
             <Route path="joueurs/:id/modifier" element={<JoueurForm />} />
